@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Detail</title>
+</head>
+<body>
+    <h1>{{ school.school_name }}</h1>
+    <p>Number of Classrooms: {{ classroom_count }}</p>
+    <p>Number of Teachers: {{ teacher_count }}</p>
+    <p>Number of Students: {{ student_count }}</p>
+    <h2>Classrooms</h2>
+    <ul>
+        {% for classroom in school.classrooms %}
+            <li>{{ classroom.classroom_class }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Teachers</h2>
+    <ul>
+        {% for teacher in school.teachers %}
+            <li>{{ teacher.teacher_name }} {{ teacher.teacher_lastname }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Students</h2>
+    <ul>
+        {% for student in school.students %}
+            <li>{{ student.student_name }} {{ student.student_lastname }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
